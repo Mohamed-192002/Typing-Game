@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing...</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+
+    <div class="header container-fluid">
+        <h2>
+            <i class="fa-solid fa-keyboard"></i>
+            Welcome In Game
+        </h2>
+    </div>
+    <!-- Difficulty -->
+    <nav>
+        <div class="dif container">
+            <h3>
+                <span class="sp">Check Difficulty :</span>
+                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off"
+                    value="1">
+                <label class="btn btn-outline-success" for="success-outlined">Hard</label>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off"
+                    value="2">
+                <label class="btn btn-outline-danger" for="danger-outlined">Medium</label>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="primary-outlined" autocomplete="off"
+                    value="3">
+                <label class="btn btn-outline-primary" for="primary-outlined">Easy</label>
+            </h3>
+        </div>
+    </nav>
+    <!-- Input And Timer -->
+    <main>
+        <div class="in">
+            <h2 class="display-2 mb-5 text-center" id="current-word">Start</h2>
+            <input type="text" class="form-control form-control-sm text-center" placeholder="Start typing..."
+                id="word-input" autofocus>
+        </div>
+        <div class="timer">
+            <div class="c">
+                <h3 id="timeLeft"> Time Left</h3>
+                <div id="t">0</div>
+            </div>
+        </div>
+    </main>
+    <!--  Start , Score And High Score -->
+    <footer>
+        <div class="container">
+            <div class="myBtn">
+                <button type="button" id="btn" onclick="location.reload()" class="btn btn-outline-warning fw-bold">Start
+                    Another
+                    Game</button>
+            </div>
+            <div id="gools">
+                <p id="gool">score</p>
+                <span id="score">0</span>
+            </div>
+            <div id="gools">
+                <p id="HighGools">High Score</p>
+                <span id="HighScore">0</span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -12,6 +12,7 @@ const relode = document.querySelector("btn");
 const myScore = document.querySelector("#score");
 const highScore = document.querySelector("#HighScore");
 const all = document.querySelectorAll('input[type="radio"]');
+const highScoreBtn = document.getElementById("HighGools");
 const words = [
   "hat",
   "river",
@@ -113,18 +114,17 @@ function checkStatus() {
     wordInput.placeholder = "End Game";
     if (window.localStorage.getItem("checkValue") === "1") {
       highScore.innerHTML = window.localStorage.getItem("highHard");
-      document.getElementById("HighGools").innerHTML = "High Score ( Hard )";
+      highScoreBtn.innerHTML = "High Score ( Hard )";
     } else if (window.localStorage.getItem("checkValue") === "2") {
       highScore.innerHTML = window.localStorage.getItem("highMedium");
-      document.getElementById("HighGools").innerHTML = "High Score ( Medium )";
+      highScoreBtn.innerHTML = "High Score ( Medium )";
     }
     if (window.localStorage.getItem("checkValue") === "3") {
       highScore.innerHTML = window.localStorage.getItem("highEasy");
-      document.getElementById("HighGools").innerHTML = "High Score ( Easy )";
+      highScoreBtn.innerHTML = "High Score ( Easy )";
     }
-  } else if (time > 0) {
-    storeHighScore();
   }
+  storeHighScore();
 }
 
 ///////////////////////////////////////
@@ -132,6 +132,7 @@ function game() {
   randomWords(words);
   wordInput.addEventListener("input", testing);
   setInterval(countdown, 1000);
-  setInterval(checkStatus, 1000);
+  setInterval(checkStatus);
 }
 ///////////////////////////////////////
+// window.localStorage.clear();

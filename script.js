@@ -133,6 +133,8 @@ function game() {
   wordInput.addEventListener("input", testing);
   setInterval(countdown, 1000);
   setInterval(checkStatus);
+  wordInput.onpaste = (e) => e.preventDefault();
 }
 ///////////////////////////////////////
 // window.localStorage.clear();
+

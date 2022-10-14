@@ -114,6 +114,7 @@ function countdown() {
 ///////////////////////////
 function checkStatus() {
   if (time === 0) {
+    score = 0;
     wordInput.disabled = true;
     wordInput.placeholder = "End Game";
     if (window.localStorage.getItem("checkValue") === "1") {

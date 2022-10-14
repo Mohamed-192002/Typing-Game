@@ -118,13 +118,19 @@ function checkStatus() {
     wordInput.disabled = true;
     wordInput.placeholder = "End Game";
     if (window.localStorage.getItem("checkValue") === "1") {
-      highScore.innerHTML = window.localStorage.getItem("highHard");
+      window.localStorage.getItem("highHard")
+        ? (highScore.innerHTML = window.localStorage.getItem("highHard"))
+        : (highScore.innerHTML = 0);
       highScoreBtn.innerHTML = "High Score ( Hard )";
     } else if (window.localStorage.getItem("checkValue") === "2") {
-      highScore.innerHTML = window.localStorage.getItem("highMedium");
+      window.localStorage.getItem("highMedium")
+        ? (highScore.innerHTML = window.localStorage.getItem("highMedium"))
+        : (highScore.innerHTML = 0);
       highScoreBtn.innerHTML = "High Score ( Medium )";
     } else if (window.localStorage.getItem("checkValue") === "3") {
-      highScore.innerHTML = window.localStorage.getItem("highEasy");
+      window.localStorage.getItem("highEasy")
+        ? (highScore.innerHTML = window.localStorage.getItem("highEasy"))
+        : (highScore.innerHTML = 0);
       highScoreBtn.innerHTML = "High Score ( Easy )";
     }
   }

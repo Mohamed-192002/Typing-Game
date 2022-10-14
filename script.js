@@ -26,6 +26,7 @@ const words = [
   "echo",
   "siblings",
   "symptom",
+  "laughter",
   "magic",
   "master",
   "space",
@@ -33,6 +34,7 @@ const words = [
   "html",
   "ajax",
   "jquary",
+  "angular",
   "vue",
   "name",
   "word",
@@ -120,8 +122,7 @@ function checkStatus() {
     } else if (window.localStorage.getItem("checkValue") === "2") {
       highScore.innerHTML = window.localStorage.getItem("highMedium");
       highScoreBtn.innerHTML = "High Score ( Medium )";
-    }
-    if (window.localStorage.getItem("checkValue") === "3") {
+    } else if (window.localStorage.getItem("checkValue") === "3") {
       highScore.innerHTML = window.localStorage.getItem("highEasy");
       highScoreBtn.innerHTML = "High Score ( Easy )";
     }
@@ -139,4 +140,3 @@ function game() {
 }
 ///////////////////////////////////////
 // window.localStorage.clear();
-
